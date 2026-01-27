@@ -54,7 +54,7 @@ const Navbar = () => {
         <div className="menu lg:flex gap-2 lg:gap-5 hidden text-white">
           {navbarLinks.map((link)=>{
             return(
-              <NavLink to={link.path} key={link.path} className={({ isActive }) =>`text-lg font-semibold transition ${isActive ? "text-[rgba(255,191,61,1)]" : "hover:text-[rgba(255,191,61,1)]"}`}>{link.name}</NavLink>
+              <NavLink to={link.path} key={link.path} className={({ isActive }) =>`uppercase text-lg font-semibold transition ${isActive ? "text-[rgba(255,191,61,1)]" : "hover:text-[rgba(255,191,61,1)]"}`}>{link.name}</NavLink>
             )
           })}
         </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
                 key={link.path}
                 to={link.path}
                 onClick={() => setOpenMenu(false)}
-                className="text-lg font-semibold hover:text-[rgba(255,191,61,1)] transition"
+                className="uppercase text-lg font-semibold hover:text-[rgba(255,191,61,1)] transition"
               >
                 {link.name}
               </Link>
