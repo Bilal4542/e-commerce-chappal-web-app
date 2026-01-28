@@ -2,17 +2,18 @@ import React from 'react'
 import Header from '../components/Header'
 import ImgTitleCard from '../components/ImgTitleCard'
 import imgTitle from '../arrays/imgTitle.js'
-import NewArrival from '../components/NewArrival.jsx'
 import newArrivalImages from '../arrays/newArrImg.js'
 import Header2 from '../components/Header2.jsx'
+import Card from '../components/Card.jsx'
 
 const Home = () => {
   return (
     <div>
       <Header/>
       <ImgTitleCard imgTitles={imgTitle}/>
-      <NewArrival newArrivalImages={newArrivalImages}/>
+      <Card newArrivalImages={newArrivalImages} title='New Arrival' btn='view all'/>
       <Header2/>
+      <Card newArrivalImages={newArrivalImages} title='Most Popular' btn='view all'/>
     </div>
   )
 }
