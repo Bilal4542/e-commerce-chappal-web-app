@@ -8,6 +8,8 @@ import Card from '../components/Card.jsx'
 import AboutUs from '../components/AboutUs.jsx'
 import CustomerReview from '../components/CustomerReview.jsx'
 import customerReviews from '../arrays/customerReviewsArr.js'
+import Contact from '../components/Contact.jsx'
+import Footer from '../components/Footer.jsx'
 
 const Home = () => {
   return (
@@ -19,6 +21,8 @@ const Home = () => {
       <Card newArrivalImages={newArrivalImages} title='Most Popular' btn='view all'/>
       <AboutUs/>
       <CustomerReview customerReviews={customerReviews}/>
+      <Contact/>
+      <Footer/>
     </div>
   )
 }
