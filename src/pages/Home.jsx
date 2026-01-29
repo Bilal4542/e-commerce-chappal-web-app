@@ -6,6 +6,8 @@ import newArrivalImages from '../arrays/newArrImg.js'
 import Header2 from '../components/Header2.jsx'
 import Card from '../components/Card.jsx'
 import AboutUs from '../components/AboutUs.jsx'
+import CustomerReview from '../components/CustomerReview.jsx'
+import customerReviews from '../arrays/customerReviewsArr.js'
 
 const Home = () => {
   return (
@@ -16,6 +18,7 @@ const Home = () => {
       <Header2/>
       <Card newArrivalImages={newArrivalImages} title='Most Popular' btn='view all'/>
       <AboutUs/>
+      <CustomerReview customerReviews={customerReviews}/>
     </div>
   )
 }
