@@ -6,6 +6,7 @@ import Favourite from './pages/Favourite'
 import NewArrival from './pages/NewArrival'
 import MostPopular from './pages/MostPopular'
 import AboutUs from './pages/AboutUs'
+import Footer from "./components/Footer"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/most-popular" element={<MostPopular/>} />
         <Route path="/about-us" element={<AboutUs/>} />
       </Routes>
+      <Footer/>
     </>
   )
 }

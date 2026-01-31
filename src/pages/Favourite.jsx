@@ -1,9 +1,10 @@
 import React from 'react'
+import Filter from '../components/Filter'
 
 const Favourite = () => {
   return (
     <div>
-      Favourite
+     <Filter/>
     </div>
   )
 }

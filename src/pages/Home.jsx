@@ -8,7 +8,6 @@ import AboutUs from '../components/AboutUs.jsx'
 import CustomerReview from '../components/CustomerReview.jsx'
 import customerReviews from '../arrays/customerReviewsArr.js'
 import Contact from '../components/Contact.jsx'
-import Footer from '../components/Footer.jsx'
 import NewArr from '../components/NewArr.jsx'
 import MostPopular from '../components/MostPopular.jsx'
 
@@ -24,7 +23,7 @@ const Home = () => {
       <AboutUs/>
       <CustomerReview customerReviews={customerReviews}/>
       <Contact/>
-      <Footer/>
+      
     </div>
   )
 }
