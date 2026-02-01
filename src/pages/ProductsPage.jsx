@@ -2,7 +2,7 @@ import React from 'react'
 import ProductsCard from '../components/ProductsCard'
 import products from '../arrays/products'
 
-const Products = () => {
+const ProductsPage = () => {
   return (
     <div>
      <ProductsCard products={products}/>
@@ -10,4 +10,4 @@ const Products = () => {
   )
 }
 
-export default Products
+export default ProductsPage

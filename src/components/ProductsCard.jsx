@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from "./Card";
 import { NavLink } from "react-router-dom";
+import Filter from "./Filter";
 
 const ProductsCard = ({ products }) => {
+    const [showFilterPopup, setShowFilterPopup] = useState(false)
+
   return (
     <>
       <div className="flex flex-col lg:flex-row items-center justify-between w-[90%] mx-auto my-10">
@@ -11,18 +14,18 @@ const ProductsCard = ({ products }) => {
           Products
         </h1>
        <div className=" flex gap-3">
-         <NavLink
-          to=''
-          className={({ isActive }) =>`uppercase text-[20px] font-semibold transition ${isActive ? "text-[rgba(255,191,61,1)]" : "hover:text-[rgba(255,191,61,1)]"}`}
+         <button
+           className='uppercase text-[20px] font-semibold transition cursor-pointer hover:text-[rgba(255,191,61,1)]'
         >
           icon
-        </NavLink>
-        <NavLink
-          to={'/filter'}
-          className={({ isActive }) =>`uppercase text-[20px] font-semibold transition ${isActive ? "text-[rgba(255,191,61,1)]" : "hover:text-[rgba(255,191,61,1)]"}`}
+        </button>
+        <button
+        onClick={()=>setShowFilterPopup(true)}
+          className='uppercase text-[20px] font-semibold transition cursor-pointer hover:text-[rgba(255,191,61,1)]'
         >
           filter
-        </NavLink>
+        </button>
+        {showFilterPopup && <Filter onClose={()=>setShowFilterPopup(false)} />}
        </div>
       </div>
       <div className="flex items-center justify-center">

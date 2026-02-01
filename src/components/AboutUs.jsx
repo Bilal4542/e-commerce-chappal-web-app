@@ -1,8 +1,11 @@
 import React from "react";
 import Button from "./Button";
 import aboutus from '../assets/aboutus.jpeg'
+import { Link, useLocation } from "react-router-dom";
 
 const AboutUs = () => {
+  const location = useLocation()
+  const isAboutPage = location.pathname === '/about-us'
   return (
     <div className="flex items-center justify-center my-32">
       <div className="w-[90%] flex items-center justify-center flex-col md:flex-row gap-10">
@@ -22,7 +25,10 @@ const AboutUs = () => {
           Lorem ipsum dolor sit amet consectetur. Amet ultricies vitae mattis
           at. Malesuada viverra orci ut tellus duis etiam mauris leo volutpat.
         </p>
-       <p className="w-fit"> <Button title={'More About Us'} /></p>
+       {!isAboutPage && (
+        <Link to={'/about-us'} className="w-fit"> <Button title={'More About Us'} /></Link>
+       )
+       }
       </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
-import Home from "./pages/Home"
-import Products from './pages/Products'
-import Favourite from './pages/Favourite'
-import NewArrival from './pages/NewArrival'
-import MostPopular from './pages/MostPopular'
-import AboutUs from './pages/AboutUs'
 import Footer from "./components/Footer"
+import AboutUsPage from "./pages/AboutUsPage"
+import ProductsPage from "./pages/ProductsPage"
+import FavouritePage from "./pages/FavouritePage"
+import NewArrivalPage from "./pages/NewArrivalPage"
+import MostPopularPage from "./pages/MostPopularPage"
+import HomePage from "./pages/HomePage"
 
 function App() {
 
@@ -14,12 +14,12 @@ function App() {
     <>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/products" element={<Products/>}/>
-        <Route path="/favourite" element={<Favourite/>}/>
-        <Route path="/new-arrival" element={<NewArrival/>}/>
-        <Route path="/most-popular" element={<MostPopular/>} />
-        <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/" element={<HomePage/>}/>
+        <Route path="/products" element={<ProductsPage/>}/>
+        <Route path="/favourite" element={<FavouritePage/>}/>
+        <Route path="/new-arrival" element={<NewArrivalPage/>}/>
+        <Route path="/most-popular" element={<MostPopularPage/>} />
+        <Route path="/about-us" element={<AboutUsPage/>} />
       </Routes>
       <Footer/>
     </>
