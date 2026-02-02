@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Filter from "./Filter";
 
 const ProductsCard = ({ products }) => {
@@ -32,8 +32,8 @@ const ProductsCard = ({ products }) => {
         <div className="w-[90%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 my-4">
           {products.map((item) => {
             return (
-              <div className="">
-                <Card
+             <Link to={`/product/${item.id}`}>
+             <Card
                   image={item.image}
                   desc={item.desc}
                   oldPrice={item.oldPrice}
@@ -41,7 +41,7 @@ const ProductsCard = ({ products }) => {
                   rating={item.rating}
                   ratingNum={item.ratingNum}
                 />
-              </div>
+             </Link>
             );
           })}
         </div>

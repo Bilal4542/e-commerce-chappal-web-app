@@ -10,6 +10,7 @@ import customerReviews from '../arrays/customerReviewsArr.js'
 import Contact from '../components/Contact.jsx'
 import NewArr from '../components/NewArr.jsx'
 import MostPopular from '../components/MostPopular.jsx'
+import IndividualProduct from '../components/IndividualProduct.jsx'
 
 const HomePage = () => {
   return (

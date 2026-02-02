@@ -7,6 +7,7 @@ import FavouritePage from "./pages/FavouritePage"
 import NewArrivalPage from "./pages/NewArrivalPage"
 import MostPopularPage from "./pages/MostPopularPage"
 import HomePage from "./pages/HomePage"
+import IndividualProduct from "./components/IndividualProduct"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/new-arrival" element={<NewArrivalPage/>}/>
         <Route path="/most-popular" element={<MostPopularPage/>} />
         <Route path="/about-us" element={<AboutUsPage/>} />
+        <Route path="/product/:id" element={<IndividualProduct/>}/>
       </Routes>
       <Footer/>
     </>
