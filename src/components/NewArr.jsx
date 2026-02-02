@@ -14,7 +14,9 @@ const NewArr = ({products}) => {
     <div   className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 w-[90%]'>
         {products.slice(0,4).map((item)=>{
             return(
-                    <Card image={item.image} desc={item.desc} oldPrice={item.oldPrice} salePrice={item.salePrice} rating={item.rating} ratingNum={item.ratingNum}/>
+                    <Link to={`/product/${item.id}`}>
+                      <Card image={item.image} desc={item.desc} oldPrice={item.oldPrice} salePrice={item.salePrice} rating={item.rating} ratingNum={item.ratingNum}/>
+                    </Link>
             )
         })}
     </div>

@@ -15,7 +15,9 @@ const MostPopular = ({products}) => {
                 
           {products.slice(0,4).map((item)=>{
             return(
-                <Card image={item.image} desc={item.desc} oldPrice={item.oldPrice} salePrice={item.salePrice} rating={item.rating} ratingNum={item.ratingNum}/>
+               <Link to={`/product/${item.id}`}>
+                 <Card image={item.image} desc={item.desc} oldPrice={item.oldPrice} salePrice={item.salePrice} rating={item.rating} ratingNum={item.ratingNum}/>
+               </Link>
             )
           })}
             </div>

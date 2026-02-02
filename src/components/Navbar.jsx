@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import { CiSearch, CiShoppingCart, CiUser  } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState()
-    const [isActive, setIsActive] = useState()
     const navbarLinks = [
       {
         name:'Home',
@@ -44,9 +43,11 @@ const Navbar = () => {
         icon:<CiUser size={30}  />
       }
     ]
+    const location = useLocation()
+    const isHomePage = location.pathname === '/'
   return (
     <>
-    <div className='bg-black/20 py-4 flex items-center justify-center relative z-10'>
+    <div className={` py-4 flex items-center justify-center relative z-10 ${isHomePage ? 'bg-black/20' : 'bg-[rgba(54,56,68,1)]'}`}>
       <div className="flex items-center justify-between w-[90%]">
         <div className="logo">
             <p className='text-[rgba(255,191,61,1)] text-[32px] font-bold'>LOGO</p>

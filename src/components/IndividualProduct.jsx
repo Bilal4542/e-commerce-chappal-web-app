@@ -23,18 +23,18 @@ const IndividualProduct = () => {
           </div>
           <div className="w-[50%] flex flex-col gap-6">
             <h1 className="text-2xl uppercase font-bold text-[rgba(47,47,47,1)]">
-              Denim Peshawari Chappal (NDL x KP Shop Collaboration)
+              {product.desc}
             </h1>
             <p className="flex gap-1 items-center">
               <span>⭐</span>
-              <span className="text-[18px]">4.8</span>
-              <sub>(23)</sub>
+              <span className="text-[18px]">{product.rating}</span>
+              <sub>({product.ratingNum})</sub>
             </p>
             <p className="flex gap-3 items-center font-bold">
               <span className="line-through decoration-red-500 decoration-2 text-[rgba(47,47,47,0.7)]">
-                2400
+                {product.oldPrice}
               </span>
-              <span>2200</span>
+              <span>{product.salePrice}</span>
             </p>
             <h1 className="text-[30px] uppercase font-bold">Size</h1>
             <p className="text-[26px] font-bold">12</p>
