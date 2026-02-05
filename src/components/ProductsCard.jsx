@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Card from "./Card";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Filter from "./Filter";
 
 const ProductsCard = ({ products }) => {

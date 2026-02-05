@@ -3,9 +3,11 @@ import { Link, NavLink, useLocation } from 'react-router-dom'
 import { CiSearch, CiShoppingCart, CiUser  } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
+import Search from './Search';
 
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState()
+    const [showSearch, setShowSearch] = useState()
     const navbarLinks = [
       {
         name:'Home',
@@ -34,10 +36,12 @@ const Navbar = () => {
     ]
     const icons = [
       {
-        icon:<CiSearch size={30}/>
+        icon:<CiSearch size={30}/>,
+        action: ()=> setShowSearch(prev => !prev)
       },
       {
-        icon:<CiShoppingCart size={30} />
+        icon:<CiShoppingCart size={30} />,
+        path: '/cart'
       },
       {
         icon:<CiUser size={30}  />
@@ -60,12 +64,13 @@ const Navbar = () => {
           })}
         </div>
         <div className="icons lg:flex gap-2 lg:gap-3 hidden">
-          {icons.map((icon)=>{
+          {icons.map((item)=>{
             return(
-              <a href="" className='bg-[rgba(255,255,255,0.15)] p-2 rounded-xl text-white'>{icon.icon}</a>
+              <Link to={item.path} onClick={item.action} className='bg-[rgba(255,255,255,0.15)] cursor-pointer p-2 rounded-xl text-white'>{item.icon}</Link>
             )
           })}
         </div>
+        
              {/* Mobile Hamburger */}
           <button
             onClick={() => setOpenMenu(!openMenu)}
@@ -74,6 +79,7 @@ const Navbar = () => {
             {openMenu ? <RxCross2 size={26} /> : <GiHamburgerMenu size={26} />}
           </button>
       </div>
+            
     </div>
     {/* Mobile Menu */}
       {openMenu && (
@@ -90,15 +96,16 @@ const Navbar = () => {
               </Link>
             ))}
                <div className="icons flex gap-2 lg:gap-5">
-                {icons.map((icon)=>{
+                {icons.map((item)=>{
                   return(
-                     <a href="" className='bg-[rgba(255,255,255,0.15)] p-2 rounded-xl'>{icon.icon}</a>
+                     <Link to={item.path} className='bg-[rgba(255,255,255,0.15)] p-2 rounded-xl'>{item.icon}</Link>
                   )
                 })}
         </div>
           </div>
         </div>
       )}
+        {showSearch && <Search />}
     </>
   )
 }
