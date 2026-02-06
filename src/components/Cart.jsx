@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import img1 from "../assets/imgtitle5.png";
 import { FaMinus, FaPlus } from "react-icons/fa6";
+import products from '../arrays/products.js'
 
 const Cart = () => {
   return (

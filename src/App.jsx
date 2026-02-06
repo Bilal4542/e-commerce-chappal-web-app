@@ -14,7 +14,7 @@ function App() {
 
   return (
     <>
-      {/* <Navbar/> */}
+      <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>
         <Route path="/products" element={<ProductsPage/>}/>
@@ -25,7 +25,7 @@ function App() {
         <Route path="/product/:id" element={<IndividualProduct/>}/>
         <Route path="/cart" element={ <Cart/> }/>
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </>
   )
 }
