@@ -9,6 +9,7 @@ import MostPopularPage from "./pages/MostPopularPage"
 import HomePage from "./pages/HomePage"
 import IndividualProduct from "./components/IndividualProduct"
 import Cart from "./components/Cart"
+import Checkout from "./components/Checkout"
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
         <Route path="/about-us" element={<AboutUsPage/>} />
         <Route path="/product/:id" element={<IndividualProduct/>}/>
         <Route path="/cart" element={ <Cart/> }/>
+        <Route path="/checkout" element={ <Checkout/> } />
       </Routes>
       <Footer/>
     </>

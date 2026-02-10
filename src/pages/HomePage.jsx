@@ -10,7 +10,6 @@ import customerReviews from '../arrays/customerReviewsArr.js'
 import Contact from '../components/Contact.jsx'
 import NewArr from '../components/NewArr.jsx'
 import MostPopular from '../components/MostPopular.jsx'
-import Checkout from '../components/Checkout.jsx'
 
 const HomePage = () => {
   return (
@@ -23,7 +22,6 @@ const HomePage = () => {
       <AboutUs/>
       <CustomerReview customerReviews={customerReviews}/>
       <Contact/>
-      <Checkout/>
     </div>
   )
 }

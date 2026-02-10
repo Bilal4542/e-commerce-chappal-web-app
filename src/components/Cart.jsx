@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import img1 from "../assets/imgtitle5.png";
 import { FaMinus, FaPlus } from "react-icons/fa6";
 import products from '../arrays/products.js'
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   return (
@@ -70,7 +71,7 @@ const Cart = () => {
                     </div>
                 </div>
                 <div className="flex flex-col my-10">
-                    <button className="py-3 border rounded-[80px] bg-[rgba(255,191,61,1)] text-white">Checkout</button>
+                    <Link to={'/checkout'} className="p-3 border rounded-[80px] bg-[rgba(255,191,61,1)] text-white cursor-pointer">Checkout</Link>
                 </div>
             </div>
          </div>
