@@ -24,14 +24,14 @@ const Checkout = () => {
         Checkout
       </h1>
 
-      <h2 className="px-20 font-bold mb-8 text-[24px] text-[rgba(51,55,64,1)]">
+      <h2 className="px-5 lg:px-20 font-bold mb-8 text-[24px] text-[rgba(51,55,64,1)]">
         Address
       </h2>
 
       <div className="flex items-center justify-center">
-        <div className="w-[90%] flex justify-center">
+        <div className="w-[90%] flex justify-center flex-col lg:flex-row">
           {/* LEFT SIDE */}
-          <div className="w-[70%] border-r-2 pr-20">
+          <div className="lg:w-[70%] lg:border-r-2 lg:pr-20">
             <form className="flex flex-col justify-center gap-8">
               {/* EMAIL */}
               <div className="w-full flex flex-col gap-4">
@@ -51,7 +51,7 @@ const Checkout = () => {
                   Address
                 </label>
 
-                <div className="flex justify-between gap-12">
+                <div className="flex justify-between gap-6 lg:gap-12 flex-col lg:flex-row">
                   <input
                     type="text"
                     placeholder="Full name"
@@ -65,7 +65,7 @@ const Checkout = () => {
                 </div>
 
                 {/* STATE + CITY */}
-                <div className="flex justify-between gap-12">
+                <div className="flex justify-between gap-6 lg:gap-12 flex-col lg:flex-row">
                   {/* STATE DROPDOWN */}
                   <div className="relative w-full">
                     <input
@@ -134,7 +134,7 @@ const Checkout = () => {
                 </div>
 
                 {/* STREET + ZIP */}
-                <div className="flex justify-between gap-12">
+                <div className="flex justify-between gap-12 flex-col lg:flex-row">
                   {/* STREET DROPDOWN */}
                   <div className="relative w-full">
                     <input
@@ -182,7 +182,7 @@ const Checkout = () => {
                 Payment
               </h2>
 
-              <div className="w-full flex flex-col gap-4">
+              <div className="w-full flex flex-col gap-4 my-6">
                 <label className="text-[14px] font-bold text-[rgba(51,55,64,1)] ml-2">
                   Payment Method
                 </label>
@@ -215,7 +215,7 @@ const Checkout = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="w-[30%] pl-7">
+          <div className="lg:w-[30%] lg:pl-7">
             <h1 className="font-bold text-2xl uppercase text-[rgba(51,55,64,1)]">
               Order Summary
             </h1>
