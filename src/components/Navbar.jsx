@@ -4,6 +4,7 @@ import { CiSearch, CiShoppingCart, CiUser  } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { RxCross2 } from "react-icons/rx";
 import Search from './Search';
+import ProfileDropDown from './ProfileDropDown';
 
 const Navbar = () => {
     const [openMenu, setOpenMenu] = useState()
@@ -44,7 +45,8 @@ const Navbar = () => {
         path: '/cart'
       },
       {
-        icon:<CiUser size={30}  />
+        icon:<CiUser size={30}  />,
+        path: '/profile'
       }
     ]
     const location = useLocation()
@@ -69,6 +71,7 @@ const Navbar = () => {
               <Link to={item.path} onClick={item.action} className='bg-[rgba(255,255,255,0.15)] cursor-pointer p-2 rounded-xl text-white'>{item.icon}</Link>
             )
           })}
+          <ProfileDropDown/>
         </div>
         
              {/* Mobile Hamburger */}

@@ -10,6 +10,8 @@ import HomePage from "./pages/HomePage"
 import IndividualProduct from "./components/IndividualProduct"
 import Cart from "./components/Cart"
 import Checkout from "./components/Checkout"
+import Profile from "./components/Profile"
+import EditProfile from "./components/EditProfile"
 
 function App() {
 
@@ -26,6 +28,8 @@ function App() {
         <Route path="/product/:id" element={<IndividualProduct/>}/>
         <Route path="/cart" element={ <Cart/> }/>
         <Route path="/checkout" element={ <Checkout/> } />
+        <Route path="/profile" element={ <Profile/> }/>
+        <Route path="/edit-profile" element={ <EditProfile/> }/>
       </Routes>
       <Footer/>
     </>
