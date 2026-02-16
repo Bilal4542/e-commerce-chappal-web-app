@@ -26,7 +26,7 @@ const ProfileDropDown = () => {
           <Link to={'/cart'} className="font-semibold text-gray-800 cursor-pointer mb-3">
             My Cart
           </Link>
-          <Link className="font-semibold text-gray-800 cursor-pointer mb-3">
+          <Link to={'/setting'} className="font-semibold text-gray-800 cursor-pointer mb-3">
             Setting
           </Link>
           <Link className="font-semibold text-gray-800 cursor-pointer mb-3">

@@ -44,10 +44,6 @@ const Navbar = () => {
         icon:<CiShoppingCart size={30} />,
         path: '/cart'
       },
-      {
-        icon:<CiUser size={30}  />,
-        path: '/profile'
-      }
     ]
     const location = useLocation()
     const isHomePage = location.pathname === '/'
@@ -65,7 +61,7 @@ const Navbar = () => {
             )
           })}
         </div>
-        <div className="icons lg:flex gap-2 lg:gap-3 hidden">
+        <div className="icons lg:flex items-center gap-2 lg:gap-3 hidden">
           {icons.map((item)=>{
             return(
               <Link to={item.path} onClick={item.action} className='bg-[rgba(255,255,255,0.15)] cursor-pointer p-2 rounded-xl text-white'>{item.icon}</Link>

@@ -12,6 +12,8 @@ import Cart from "./components/Cart"
 import Checkout from "./components/Checkout"
 import Profile from "./components/Profile"
 import EditProfile from "./components/EditProfile"
+import Setting from "./components/Setting"
+import AnotherAddress from "./components/AnotherAddress"
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
         <Route path="/checkout" element={ <Checkout/> } />
         <Route path="/profile" element={ <Profile/> }/>
         <Route path="/edit-profile" element={ <EditProfile/> }/>
+        <Route path="/setting" element={ <Setting/> }/>
+        <Route path="/another-address" element={ <AnotherAddress/> } />
       </Routes>
       <Footer/>
     </>
