@@ -14,6 +14,10 @@ import Profile from "./components/Profile"
 import EditProfile from "./components/EditProfile"
 import Setting from "./components/Setting"
 import AnotherAddress from "./components/AnotherAddress"
+import ChangePassword from "./components/ChangePassword"
+import ForgetPassword from "./components/ForgetPassword"
+import Verification from "./components/Verification"
+import NewPassword from "./components/NewPassword"
 
 function App() {
 
@@ -34,6 +38,10 @@ function App() {
         <Route path="/edit-profile" element={ <EditProfile/> }/>
         <Route path="/setting" element={ <Setting/> }/>
         <Route path="/another-address" element={ <AnotherAddress/> } />
+        <Route path="/change-password" element={ <ChangePassword/> } />
+        <Route path="/forget-password" element={ <ForgetPassword/> } />
+        <Route path="/verification" element={ <Verification/> } />
+        <Route path="/new-password" element={ <NewPassword/> } />
       </Routes>
       <Footer/>
     </>

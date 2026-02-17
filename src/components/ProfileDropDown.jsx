@@ -29,7 +29,7 @@ const ProfileDropDown = () => {
           <Link to={'/setting'} className="font-semibold text-gray-800 cursor-pointer mb-3">
             Setting
           </Link>
-          <Link className="font-semibold text-gray-800 cursor-pointer mb-3">
+          <Link to={'/change-password'} className="font-semibold text-gray-800 cursor-pointer mb-3">
             Change Password
           </Link>
           <div className="h-px bg-gray-300 my-3"></div>
