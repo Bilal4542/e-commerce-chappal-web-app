@@ -164,10 +164,10 @@ const Orders = () => {
                     <p className="uppercase text-[rgba(255,255,255,1)] text-[18px] font-semibold">
                       Rs. 3,200
                     </p>
-                    <Link className="bg-[rgba(255,191,61,1)] py-2 px-4 uppercase rounded-[80px] text-white font-bold">
+                    <Link to={'/add-review'} className="bg-[rgba(255,191,61,1)] py-2 px-4 uppercase rounded-[80px] text-white font-bold">
                       Add Review
                     </Link>
-                    <Link className="text-[rgba(255,191,61,1)] py-2 px-4 uppercase rounded-[80px]  bg-white font-bold">
+                    <Link to={'/details'} className="text-[rgba(255,191,61,1)] py-2 px-4 uppercase rounded-[80px]  bg-white font-bold">
                       View Details
                     </Link>
                   </div>
@@ -264,7 +264,7 @@ const Orders = () => {
                     <p className="uppercase text-[rgba(255,255,255,1)] text-[18px] font-semibold">
                       Rs. 3,200
                     </p>
-                    <Link className="bg-[rgba(255,191,61,1)] py-2 px-4 uppercase rounded-[80px] text-white font-bold">
+                    <Link to={'/details'} className="bg-[rgba(255,191,61,1)] py-2 px-4 uppercase rounded-[80px] text-white font-bold">
                       View Details
                     </Link>
                   </div>

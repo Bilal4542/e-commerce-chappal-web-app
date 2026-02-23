@@ -19,6 +19,8 @@ import ForgetPassword from "./components/ForgetPassword"
 import Verification from "./components/Verification"
 import NewPassword from "./components/NewPassword"
 import Orders from "./components/Orders"
+import AddReview from "./components/AddReview"
+import Details from "./components/Details"
 
 function App() {
 
@@ -44,6 +46,8 @@ function App() {
         <Route path="/verification" element={ <Verification/> } />
         <Route path="/new-password" element={ <NewPassword/> } />
         <Route path="/orders" element={ <Orders/> }/>
+        <Route path="/add-review" element={ <AddReview/> }/>
+        <Route path="/details" element={ <Details/> } />
       </Routes>
       <Footer/>
     </>
